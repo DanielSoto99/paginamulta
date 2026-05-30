@@ -2,8 +2,6 @@
 
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function handler(event) {
   if (event.httpMethod !== "POST") {
     return {
@@ -13,6 +11,14 @@ export async function handler(event) {
   }
 
   try {
+    const resendApiKey = process.env.RESEND_API_KEY;
+
+    if (!resendApiKey) {
+      throw new Error("Falta RESEND_API_KEY en Netlify.");
+    }
+
+    const resend = new Resend(resendApiKey);
+
     const {
       nombre,
       rut,
@@ -28,6 +34,7 @@ export async function handler(event) {
       from: "RevisaTAG <onboarding@resend.dev>",
       to: ["prescribetusmultas@gmail.com"],
       subject: `Nueva solicitud TAG - ${patente}`,
+      reply_to: email,
       html: `
         <h2>Nueva solicitud de revisión TAG</h2>
 
