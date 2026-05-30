@@ -1,0 +1,537 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #101828;
+}
+
+.page {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.hero {
+  min-height: 92vh;
+  background:
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.35), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(59, 130, 246, 0.35), transparent 35%),
+    linear-gradient(135deg, #020617, #0f172a 45%, #1d4ed8);
+  color: white;
+  padding: 24px;
+}
+
+.navbar {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.navButton,
+.primaryButton,
+.secondaryButton {
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navButton {
+  color: #04111f;
+  background: #facc15;
+  padding: 12px 18px;
+  box-shadow: 0 12px 30px rgba(250, 204, 21, 0.35);
+}
+
+.heroContent {
+  max-width: 1180px;
+  margin: 85px auto 40px;
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.badge,
+.sectionBadge {
+  display: inline-flex;
+  width: fit-content;
+  background: rgba(250, 204, 21, 0.16);
+  color: #fde68a;
+  border: 1px solid rgba(250, 204, 21, 0.35);
+  padding: 9px 15px;
+  border-radius: 999px;
+  font-weight: 900;
+  margin-bottom: 18px;
+}
+
+.sectionBadge {
+  background: #e0ecff;
+  color: #1d4ed8;
+  border: none;
+}
+
+.sectionBadge.light {
+  background: rgba(255, 255, 255, 0.14);
+  color: white;
+}
+
+h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+  margin: 0 0 24px;
+  letter-spacing: -2px;
+}
+
+.hero p {
+  font-size: 20px;
+  line-height: 1.7;
+  max-width: 700px;
+  color: #dbeafe;
+  margin-bottom: 28px;
+}
+
+.heroActions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.primaryButton {
+  color: #04111f;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  padding: 16px 24px;
+  box-shadow: 0 18px 40px rgba(251, 146, 60, 0.35);
+}
+
+.secondaryButton {
+  color: white;
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 16px 22px;
+  background: rgba(255,255,255,0.08);
+}
+
+.trustRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.trustRow span {
+  background: rgba(255, 255, 255, 0.11);
+  border: 1px solid rgba(255,255,255,0.16);
+  padding: 10px 13px;
+  border-radius: 999px;
+  font-weight: 700;
+  color: #e5e7eb;
+}
+
+.heroCard {
+  background: rgba(255,255,255,0.96);
+  color: #101828;
+  padding: 32px;
+  border-radius: 32px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  transform: rotate(1.5deg);
+}
+
+.cardIcon {
+  width: 62px;
+  height: 62px;
+  background: #dcfce7;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.heroCard h3 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+
+.heroCard p {
+  color: #475569;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.miniList {
+  display: grid;
+  gap: 10px;
+}
+
+.miniList div {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 12px;
+  border-radius: 15px;
+  font-weight: 800;
+}
+
+.highlight {
+  max-width: 1180px;
+  margin: -40px auto 70px;
+  padding: 28px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 24px 50px rgba(22, 163, 74, 0.25);
+}
+
+.highlight strong {
+  font-size: 24px;
+}
+
+.highlight p {
+  margin: 8px 0 0;
+  line-height: 1.6;
+}
+
+.highlight a {
+  color: #052e16;
+  background: white;
+  padding: 14px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.section {
+  max-width: 1180px;
+  margin: 70px auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.section h2,
+.contactInfo h2 {
+  font-size: clamp(32px, 4vw, 46px);
+  letter-spacing: -1px;
+  margin: 0 0 28px;
+}
+
+.steps,
+.benefits {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.step,
+.benefitCard {
+  background: white;
+  padding: 30px;
+  border-radius: 28px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e8eef7;
+}
+
+.step span {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #1d4ed8, #38bdf8);
+  color: white;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 18px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.step h3,
+.benefitCard h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.step p,
+.benefitCard p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.benefits {
+  max-width: 1180px;
+  margin: 40px auto 80px;
+  padding: 0 24px;
+}
+
+.benefitCard span {
+  font-size: 38px;
+}
+
+.contactSection {
+  max-width: 1180px;
+  margin: 80px auto;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 35px;
+  align-items: start;
+}
+
+.contactInfo {
+  background:
+    radial-gradient(circle at top right, rgba(250, 204, 21, 0.3), transparent 35%),
+    linear-gradient(135deg, #0f172a, #1d4ed8);
+  color: white;
+  padding: 36px;
+  border-radius: 32px;
+  position: sticky;
+  top: 20px;
+  box-shadow: 0 25px 60px rgba(30, 64, 175, 0.25);
+}
+
+.contactInfo p {
+  color: #dbeafe;
+  line-height: 1.7;
+}
+
+.documentBox {
+  margin-top: 24px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.documentBox h4 {
+  margin: 0 0 12px;
+}
+
+.documentBox p {
+  margin: 8px 0;
+}
+
+.form {
+  background: white;
+  padding: 34px;
+  border-radius: 32px;
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+  display: grid;
+  gap: 18px;
+  border: 1px solid #e8eef7;
+}
+
+.formHeader h3 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.formHeader p {
+  color: #64748b;
+  margin: 8px 0 4px;
+}
+
+label {
+  display: grid;
+  gap: 8px;
+  font-weight: 900;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #d6dce8;
+  border-radius: 16px;
+  font-size: 16px;
+  outline: none;
+  background: #fbfdff;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
+}
+
+input[type="file"] {
+  background: #f8fafc;
+  cursor: pointer;
+}
+
+small {
+  color: #64748b;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+button {
+  border: none;
+  background: linear-gradient(135deg, #facc15, #fb923c);
+  color: #111827;
+  padding: 17px;
+  border-radius: 18px;
+  font-size: 17px;
+  font-weight: 950;
+  cursor: pointer;
+  box-shadow: 0 18px 35px rgba(251, 146, 60, 0.25);
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .heroContent,
+  .steps,
+  .benefits,
+  .contactSection,
+  .highlight {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .heroContent {
+    margin-top: 55px;
+  }
+
+  .heroCard {
+    transform: none;
+  }
+
+  .highlight {
+    margin: 24px;
+  }
+
+  .contactInfo {
+    position: static;
+  }
+
+  .navbar {
+    gap: 14px;
+  }
+
+  .navButton {
+    font-size: 14px;
+    padding: 10px 13px;
+  }
+
+  .estadoFormulario {
+  padding: 14px;
+  border-radius: 14px;
+  background: #f1f5f9;
+  font-weight: 800;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 18px;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+
+  .navButton {
+    font-size: 13px;
+    padding: 9px 11px;
+  }
+
+  .heroContent {
+    margin-top: 42px;
+    gap: 28px;
+  }
+
+  h1 {
+    font-size: 38px;
+    letter-spacing: -1px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .trustRow {
+    flex-direction: column;
+  }
+
+  .highlight {
+    margin: 20px 14px 50px;
+    padding: 22px;
+  }
+
+  .highlight a {
+    text-align: center;
+    white-space: normal;
+  }
+
+  .section {
+    margin: 50px auto;
+    padding: 0 16px;
+  }
+
+  .steps,
+  .benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .contactSection {
+    margin: 50px auto;
+    padding: 16px;
+    grid-template-columns: 1fr;
+  }
+
+  .contactInfo,
+  .form {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .formHeader h3 {
+    font-size: 24px;
+  }
+
+  input,
+  textarea,
+  button {
+    font-size: 15px;
+  }
+}
+}
